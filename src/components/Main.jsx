@@ -1,6 +1,14 @@
 import posts from "../data/posts.js";
 
 function Main() {
+    // Oggetto per mappare i tag ai colori
+    const tagColors = {
+        "js": "blue",
+        "css": "orange",
+        "html": "green",
+        "php": "purple"
+    };
+
     const post = [...posts];
     return (
         <main className="container">
@@ -11,7 +19,17 @@ function Main() {
                             <img src="https://placehold.co/600x400" alt="immagine di placeholder" />
                             <h2>{immagine.title}</h2>
                             <p>{immagine.content}</p>
-                            <p className="tag">{immagine.tags}</p>
+                            <div>
+                                {immagine.tags.map((tag, index) => (
+                                    <span
+                                        key={index}
+                                        className="tag"
+                                        style={{ color: tagColors[tag], marginRight: "10px" }}
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
                         </div>
                     ))}
             </div>
@@ -20,3 +38,5 @@ function Main() {
 }
 
 export default Main;
+
+
