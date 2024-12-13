@@ -1,8 +1,8 @@
 function Card({
-    image = "https://picsum.photos/600/400",
+    image = "https://placehold.co/600x400",
     title,
     tags,
-    content = "Descrizione non presente",
+    content,
     published,
 }) {
     return (

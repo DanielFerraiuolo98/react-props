@@ -1,5 +1,4 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -7,4 +6,20 @@
 
 img {
   width: 300px;
+}
+
+.tag-html {
+  background-color: red;
+}
+
+.tag-css {
+  background-color: green;
+}
+
+.tag-javascript {
+  background-color: yellow;
+}
+
+.tag-php {
+  background-color: violet;
 }
